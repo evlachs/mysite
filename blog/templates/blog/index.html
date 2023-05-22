@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>{% block title %}Rekruto! Давай дружить!{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+ {% if request.GET.name and request.GET.message %}
+  <h1>Hello {{request.GET.name}}!</h1>
+  <h1>{{request.GET.message}}!</h1>
+ {% else %}
+  <h1>Rekruto! Давай дружить!</h1>
+ {% endif %}
+{% endblock %}
+</body>
+</html>
